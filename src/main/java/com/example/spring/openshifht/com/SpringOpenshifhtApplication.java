@@ -12,7 +12,8 @@ import org.springframework.web.bind.annotation.RestController;
 public class SpringOpenshifhtApplication {
 	
 	@GetMapping("/")
-	public String welcome() {
+	public String welcome() throws InterruptedException{
+		Thread.sleep(2000);
 		return "Bienvenido al mundo OpenShifht";
 	}
 	
